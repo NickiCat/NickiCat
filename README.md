@@ -70,7 +70,7 @@ Told you.
 
 ## What I do
 
-Mostly I build and run infrastructure: clusters, the pipelines that ship to them, and the monitoring that tells me when it all broke. I automate anything I have to do twice. When a tool I want doesn't exist, I write it.
+DevOps engineer. Mostly I build and run infrastructure: clusters, the pipelines that ship to them, and the monitoring that tells me when it all broke. I automate anything I have to do twice. When a tool I want doesn't exist, I write it.
 
 <details>
 <summary><b>Clusters</b></summary>
