@@ -96,7 +96,7 @@ def hero():
             typed += f'<path class="ch" style="animation-delay:{0.6 + i * step:.2f}s" d="{d}" fill="{FROST}"/>'
         stops.append(f"{(0.6 + (i + 1) * step) / CYCLE * 100:.2f}%{{transform:translateX({nx:.1f}px)}}")
     stops.append(f"100%{{transform:translateX({chars[-1][2]:.1f}px)}}")
-    items = ["Profile", "Projects", "Stack", "Desk", "Secrets"]
+    items = ["Profile", "What I do", "Projects", "Stack", "Secrets"]
     side = "".join(text(n, 34, 124 + i * 42, 14, "Inter-Regular", MIST) for i, n in enumerate(items))
     pills = "".join(f"{p}%{{transform:translateY({i * 42}px)}}" for p, i in
                     ((0, 0), (16, 0), (20, 1), (36, 1), (40, 2), (56, 2), (60, 3), (76, 3), (80, 4), (96, 4), (100, 0)))
@@ -130,7 +130,7 @@ def hero():
 <g class="state">{text("online", W - 70, 285, 13, "Inter-Regular", TEAL, "end")}</g>
 <g class="off">{text("touching grass", W - 70, 285, 13, "Inter-Regular", FOG, "end")}</g>
 <path d="M{SIDE + 56} 304.5H{W - 56}" stroke="{EDGE}"/>
-{text("Full mode (through debugging): code, coffee, cats", SIDE + 56, 336, 13.5, "Inter-Regular", MIST)}
+{text("Full mode (through debugging): clusters, pipelines, cats", SIDE + 56, 336, 13.5, "Inter-Regular", MIST)}
 <rect class="track" x="{W - 104}" y="320" width="46" height="24" rx="12" fill="{VIOLET}"/><circle class="knob" cx="{W - 70}" cy="332" r="9.5" fill="{INK}"/>
 <g class="toast"><rect x="{W - 318}" y="66" width="298" height="72" rx="13" fill="#10142a" stroke="#34405a"/>
 {icon(W - 306, 80, 44)}{text("BMO", W - 250, 94, 13, "Inter-SemiBold", INK)}{text("now", W - 34, 94, 11, "Inter-Regular", FOG, "end")}
@@ -140,7 +140,7 @@ def hero():
 
 
 def nav():
-    for name, label, primary in (("what", "What are u search?", True), ("projects", "Projects", False),
+    for name, label, primary in (("what", "What are u search?", True), ("about", "What I do", False), ("projects", "Projects", False),
                                  ("stack", "Stack", False), ("desk", "Desk", False)):
         w = round(width(label, 14, "Inter-Medium")) + 40
         fill, ink = (VIOLET, INK) if primary else ("#0d1120", FROST)
@@ -235,9 +235,10 @@ hero()
 nav()
 phone()
 card()
-chips("stack.svg", "Stack: Rust, Kotlin, Java, Python, GTK4, GStreamer, egui, Docker, GitLab CI, Helm, OpenShift, PostgreSQL", [
-    ("LANGUAGES", ["Rust", "Kotlin", "Java", "Python"]),
-    ("DESKTOP", ["GTK4", "GStreamer", "egui"]),
-    ("SHIPPING", ["Docker", "GitLab CI", "Helm", "OpenShift", "PostgreSQL"]),
+chips("stack.svg", "Stack: Kubernetes, OpenShift, Talos, Ceph, Helm, GitLab CI, Docker, Harbor, Ansible, Puppet, Grafana, VictoriaMetrics, Vault, Rust, Python, TypeScript, Kotlin, Java, Bash", [
+    ("CLUSTERS", ["Kubernetes", "OpenShift", "Talos", "Ceph"]),
+    ("DELIVERY", ["Helm", "GitLab CI", "Docker", "Harbor", "Ansible", "Puppet"]),
+    ("WATCHING", ["Grafana", "VictoriaMetrics", "Vault"]),
+    ("CODE", ["Rust", "Python", "TypeScript", "Kotlin", "Java", "Bash"]),
 ])
 chips("desk.svg", "Desk: CachyOS, Hyprland, Noctalia", [("DAILY", ["CachyOS", "Hyprland", "Noctalia"])])
