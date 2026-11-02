@@ -201,6 +201,18 @@ def phone():
 YAKEY_ALT = "yakey: Yandex Key codes on your Linux or Windows desktop. Open the page"
 
 
+def keyboard_icon(x, y, s):
+    """GMK87 Control's icon, s wide."""
+    k = s / 100
+    keys = "".join(f'<rect x="{16 + c * 12}" y="{42 + r * 12}" width="9" height="9" rx="2"/>' for r in range(2) for c in range(6))
+    keys += '<rect x="16" y="66" width="9" height="9" rx="2"/><rect x="76" y="66" width="9" height="9" rx="2"/>'
+    keys += "".join(f'<rect x="{16 + c * 12}" y="20" width="9" height="9" rx="2" stroke="#6f6f6f"/>' for c in range(3))
+    return (f'<g transform="translate({x} {y}) scale({k})"><rect x="3" y="3" width="94" height="94" rx="24" fill="#0b0b0b" '
+            f'stroke="#2c2c2c" stroke-width="3"/><g fill="none" stroke="#a8a8a8" stroke-width="1.5">{keys}</g>'
+            '<rect x="59" y="17" width="27" height="15" rx="2" fill="none" stroke="#eee" stroke-width="2"/>'
+            '<rect x="27" y="66" width="47" height="9" rx="2" fill="#eee"/></g>')
+
+
 def card(file, alt, mark, name, lead, sub):
     W, H = 860, 156
     style = (".dot{animation:dot 2s ease-in-out infinite}@keyframes dot{50%{opacity:.25}}"
@@ -248,6 +260,8 @@ card("card-seamdroid.svg", "SeamDroid: Android screen mirroring for Linux and Wi
      "Android screen mirroring for Linux and Windows", "Screen · notifications · clipboard · audio · webcam")
 card("card-yakey.svg", YAKEY_ALT, key_icon(28, 30, 96), "yakey",
      "Yandex Key codes on your Linux or Windows desktop", "TOTP · Yandex OTP · cloud backup import · encrypted vault")
+card("card-gmk87.svg", "GMK87 Control: configurator for the Zuoya GMK87 keyboard on Linux. Open the project", keyboard_icon(28, 30, 96), "GMK87 Control",
+     "Configurator for the Zuoya GMK87 keyboard on Linux", "Keymap · macros · lighting · screen · clock")
 chips("stack.svg", "Stack: VMware vSphere, ESXi, Kubernetes, OpenShift, Talos, Ceph, Helm, GitLab CI, Docker, Harbor, Ansible, Puppet, Grafana, VictoriaMetrics, Vault, Rust, Python, TypeScript, Kotlin, Java, Bash", [
     ("PLATFORM", ["VMware vSphere", "ESXi", "Kubernetes", "OpenShift", "Talos", "Ceph"]),
     ("DELIVERY", ["Helm", "GitLab CI", "Docker", "Harbor", "Ansible", "Puppet"]),

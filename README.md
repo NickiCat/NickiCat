@@ -110,10 +110,9 @@ From small scripts and bots to desktop and Android apps, usually because somethi
 
 <a href="https://seamdroid.nicko.space"><img src="assets/card-seamdroid.svg" width="860" alt="SeamDroid: Android screen mirroring for Linux and Windows. Open the site"></a>
 
-- [**yakey**](https://github.com/NickiCat/yakey-desktop): Yandex Key one-time codes on Linux and Windows.
-- [**GMK87 Control**](https://github.com/NickiCat/gmk87app): configurator for the Zuoya GMK87 keyboard on Linux.
-
 <a href="https://github.com/NickiCat/yakey-desktop"><img src="assets/card-yakey.svg" width="860" alt="yakey: Yandex Key codes on your Linux or Windows desktop. Open the page"></a>
+
+<a href="https://github.com/NickiCat/gmk87app"><img src="assets/card-gmk87.svg" width="860" alt="GMK87 Control: configurator for the Zuoya GMK87 keyboard on Linux. Open the project"></a>
 
 ## Stack
 
