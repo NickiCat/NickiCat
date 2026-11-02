@@ -235,8 +235,8 @@ hero()
 nav()
 phone()
 card()
-chips("stack.svg", "Stack: Kubernetes, OpenShift, Talos, Ceph, Helm, GitLab CI, Docker, Harbor, Ansible, Puppet, Grafana, VictoriaMetrics, Vault, Rust, Python, TypeScript, Kotlin, Java, Bash", [
-    ("CLUSTERS", ["Kubernetes", "OpenShift", "Talos", "Ceph"]),
+chips("stack.svg", "Stack: VMware vSphere, ESXi, Kubernetes, OpenShift, Talos, Ceph, Helm, GitLab CI, Docker, Harbor, Ansible, Puppet, Grafana, VictoriaMetrics, Vault, Rust, Python, TypeScript, Kotlin, Java, Bash", [
+    ("PLATFORM", ["VMware vSphere", "ESXi", "Kubernetes", "OpenShift", "Talos", "Ceph"]),
     ("DELIVERY", ["Helm", "GitLab CI", "Docker", "Harbor", "Ansible", "Puppet"]),
     ("WATCHING", ["Grafana", "VictoriaMetrics", "Vault"]),
     ("CODE", ["Rust", "Python", "TypeScript", "Kotlin", "Java", "Bash"]),

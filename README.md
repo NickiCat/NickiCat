@@ -76,7 +76,7 @@ Mostly I build and run infrastructure: clusters, the pipelines that ship to them
 <summary><b>Clusters</b></summary>
 <br>
 
-Installing and running Kubernetes and OpenShift, with storage and networking included. Services get packaged as Helm charts that work on both.
+Installing and running Kubernetes and OpenShift, from VMware vSphere and ESXi up, with storage and networking included. Services get packaged as Helm charts that work on both.
 
 </details>
 
@@ -110,7 +110,7 @@ From small scripts and bots to desktop and Android apps, usually because somethi
 
 ## Stack
 
-<img src="assets/stack.svg" width="860" alt="Stack: Kubernetes, OpenShift, Talos, Ceph, Helm, GitLab CI, Docker, Harbor, Ansible, Puppet, Grafana, VictoriaMetrics, Vault, Rust, Python, TypeScript, Kotlin, Java, Bash">
+<img src="assets/stack.svg" width="860" alt="Stack: VMware vSphere, ESXi, Kubernetes, OpenShift, Talos, Ceph, Helm, GitLab CI, Docker, Harbor, Ansible, Puppet, Grafana, VictoriaMetrics, Vault, Rust, Python, TypeScript, Kotlin, Java, Bash">
 
 ## Desk
 
