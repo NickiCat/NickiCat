@@ -22,6 +22,8 @@ Pick your answer. Every row opens.
 
 Screen, notifications, clipboard and webcam of an Android phone on your computer: [SeamDroid](#projects).
 
+Yandex Key codes on your desktop: [yakey](#projects).
+
 </details>
 
 <details>
@@ -107,6 +109,8 @@ From small scripts and bots to desktop and Android apps, usually because somethi
 ## Projects
 
 <a href="https://seamdroid.nicko.space"><img src="assets/card-seamdroid.svg" width="860" alt="SeamDroid: Android screen mirroring for Linux and Windows. Open the site"></a>
+
+<a href="https://github.com/NickiCat/yakey-desktop"><img src="assets/card-yakey.svg" width="860" alt="yakey: Yandex Key codes on your Linux or Windows desktop. Open the page"></a>
 
 ## Stack
 

@@ -198,19 +198,29 @@ def phone():
     save("phone.svg", svg(W, h, "A phone window: the mouse wheel flicks a feed between a calculator on a skateboard and a rabbit", style, body, defs))
 
 
-def card():
+YAKEY_ALT = "yakey: Yandex Key codes on your Linux or Windows desktop. Open the page"
+
+
+def card(file, alt, mark, name, lead, sub):
     W, H = 860, 156
     style = (".dot{animation:dot 2s ease-in-out infinite}@keyframes dot{50%{opacity:.25}}"
              ".ar{animation:ar 1.6s ease-in-out infinite}@keyframes ar{50%{transform:translateX(4px)}}")
     body = f'''<clipPath id="w"><rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="16"/></clipPath>
 <g clip-path="url(#w)"><rect width="{W}" height="{H}" fill="{CANVAS}"/><rect width="{W}" height="{H}" fill="url(#v)"/><rect width="{W}" height="{H}" fill="url(#t)"/></g>
 <rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="16" fill="none" stroke="#34405a"/>
-{icon(28, 30, 96)}{text("SeamDroid", 150, 72, 40, "Manrope-Medium", "url(#ice)", ls=-1)}
-{text("Android screen mirroring for Linux and Windows", 150, 101, 16, "Manrope-Medium", INK)}
-{text("Screen · notifications · clipboard · audio · webcam", 150, 126, 13, "Inter-Regular", FOG)}
+{mark}{text(name, 150, 72, 40, "Manrope-Medium", "url(#ice)", ls=-1)}
+{text(lead, 150, 101, 16, "Manrope-Medium", INK)}
+{text(sub, 150, 126, 13, "Inter-Regular", FOG)}
 <rect x="{W - 150}" y="58" width="122" height="40" rx="20" fill="{VIOLET}"/>{text("Open", W - 112, 83, 14, "Inter-Medium", INK, "middle")}
 <path class="ar" d="M{W - 82} 78h16m-6-6l6 6-6 6" fill="none" stroke="{INK}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'''
-    save("card-seamdroid.svg", svg(W, H, "SeamDroid: Android screen mirroring for Linux and Windows. Open the site", style, body, BACKDROP))
+    save(file, svg(W, H, alt, style, body, BACKDROP))
+
+
+def key_icon(x, y, s):
+    return (f'<g transform="translate({x} {y}) scale({s / 512})"><rect x="16" y="16" width="480" height="480" rx="108" fill="#0a0a0a" '
+            'stroke="#333333" stroke-width="6"/><g transform="translate(8 8)" fill="none" stroke="#ededed" stroke-width="36" '
+            'stroke-linecap="round" stroke-linejoin="round"><circle cx="184" cy="312" r="72"/>'
+            '<path d="M235 261 384 112M336 160 384 208M296 200 328 232"/></g></g>')
 
 
 def chips(file, alt, rows):
@@ -234,7 +244,10 @@ def chips(file, alt, rows):
 hero()
 nav()
 phone()
-card()
+card("card-seamdroid.svg", "SeamDroid: Android screen mirroring for Linux and Windows. Open the site", icon(28, 30, 96), "SeamDroid",
+     "Android screen mirroring for Linux and Windows", "Screen · notifications · clipboard · audio · webcam")
+card("card-yakey.svg", YAKEY_ALT, key_icon(28, 30, 96), "yakey",
+     "Yandex Key codes on your Linux or Windows desktop", "TOTP · Yandex OTP · cloud backup import · encrypted vault")
 chips("stack.svg", "Stack: VMware vSphere, ESXi, Kubernetes, OpenShift, Talos, Ceph, Helm, GitLab CI, Docker, Harbor, Ansible, Puppet, Grafana, VictoriaMetrics, Vault, Rust, Python, TypeScript, Kotlin, Java, Bash", [
     ("PLATFORM", ["VMware vSphere", "ESXi", "Kubernetes", "OpenShift", "Talos", "Ceph"]),
     ("DELIVERY", ["Helm", "GitLab CI", "Docker", "Harbor", "Ansible", "Puppet"]),
