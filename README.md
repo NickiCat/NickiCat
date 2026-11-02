@@ -78,7 +78,7 @@ DevOps engineer. Mostly I build and run infrastructure: clusters, the pipelines 
 <summary><b>Clusters</b></summary>
 <br>
 
-Installing and running Kubernetes and OpenShift, from VMware vSphere and ESXi up, with storage and networking included. Services get packaged as Helm charts that work on both.
+Installing and running Kubernetes and OpenShift, from VMware vSphere and ESXi to storage and networking. Services get packaged as Helm charts that work on both.
 
 </details>
 
@@ -109,6 +109,9 @@ From small scripts and bots to desktop and Android apps, usually because somethi
 ## Projects
 
 <a href="https://seamdroid.nicko.space"><img src="assets/card-seamdroid.svg" width="860" alt="SeamDroid: Android screen mirroring for Linux and Windows. Open the site"></a>
+
+- [**yakey**](https://github.com/NickiCat/yakey-desktop): Yandex Key one-time codes on Linux and Windows.
+- [**GMK87 Control**](https://github.com/NickiCat/gmk87app): configurator for the Zuoya GMK87 keyboard on Linux.
 
 <a href="https://github.com/NickiCat/yakey-desktop"><img src="assets/card-yakey.svg" width="860" alt="yakey: Yandex Key codes on your Linux or Windows desktop. Open the page"></a>
 
